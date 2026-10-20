@@ -1,0 +1,55 @@
+{
+  "name": "local-ollama-helper",
+  "displayName": "Local Ollama Helper",
+  "description": "Ask a local Ollama model about your code. Nothing leaves your machine.",
+  "version": "0.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "main": "./extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      {
+        "command": "ollamaHelper.ask",
+        "title": "Ollama: Ask about selection"
+      },
+      {
+        "command": "ollamaHelper.edit",
+        "title": "Ollama: Edit selection"
+      }
+    ],
+    "configuration": {
+      "title": "Local Ollama Helper",
+      "properties": {
+        "ollamaHelper.model": {
+          "type": "string",
+          "default": "qwen2.5-coder:7b",
+          "description": "Ollama model name (run `ollama list` to see yours)."
+        },
+        "ollamaHelper.url": {
+          "type": "string",
+          "default": "http://localhost:11434",
+          "description": "Ollama server address."
+        }
+      }
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Omarsawan/local-ollama-helper.git"
+  },
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "ollama",
+    "local",
+    "llm",
+    "ai",
+    "offline"
+  ]
+}
